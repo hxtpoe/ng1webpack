@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Angular</title>
 </head>
 <body>
-<div ng-controller="TodoController as todoCtrlVm">
-
-    {{ todoCtrlVm.count }}
-
+<div ng-controller="MainController" ng-cloak>
+    <h1>{{ text }}</h1>
+    <p>
+        <span>count: {{ count }}</span>
+        <!--<button ng-click="inc()">inc</button>-->
+    </p>
+    <input ng-model="text"/>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src="assets/app.js"></script>
