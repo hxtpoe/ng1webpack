@@ -1,3 +1,6 @@
+import PlayerModule from './player/player-module';
+import UserModule from './user/user-module';
+
 angular.element(document).ready(function () {
   setTimeout(
     function () {
@@ -6,7 +9,7 @@ angular.element(document).ready(function () {
   )
 });
 
-angular.module('myApp', ['ui.router'])
+angular.module('myApp', ['ui.router', 'userModule'])
   .controller('MainController', ['$scope', function ($scope) {
     $scope.count = 5;
 
@@ -22,13 +25,14 @@ angular.module('myApp', ['ui.router'])
     var gradebook = {
       name: 'gradebook',
       url: '/gradebook',
-      template: '<h3>hello world!</h3>'
+      template: '<h3>Gradebook</h3>' +
+      ''
     }
 
     var profile = {
       name: 'profile',
       url: '/profile',
-      template: '<h3>Its the UI-Router hello world app!</h3>'
+      template: '<user-list my-var="22424"></user-list>'
     }
 
     $stateProvider.state(gradebook);
