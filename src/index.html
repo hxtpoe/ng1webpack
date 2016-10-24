@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular</title>
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.14);
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
+<div class="menu"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
 <div ng-controller="MainController" ng-cloak>
     <h1>{{ text }}</h1>
     <p>
@@ -13,7 +30,9 @@
     </p>
     <input ng-model="text"/>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"
 <script src="assets/app.js"></script>
 </body>
 </html>
