@@ -32,7 +32,8 @@ angular.module('myApp', ['ui.router', 'userModule'])
     var profile = {
       name: 'profile',
       url: '/profile',
-      template: '<user-list my-var="22424"></user-list>'
+      template: '<user-list my-var="22424"></user-list>' +
+      '<user-list my-var="22424"></user-list>'
     }
 
     $stateProvider.state(gradebook);
